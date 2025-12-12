@@ -1,7 +1,9 @@
 import express from "express"
 import { configDotenv } from "dotenv"
-configDotenv()
+import connectDB from "./Config/ConfigDB.js"
 
+configDotenv()
+connectDB()
 const app = express()
 const PORT = process.env.PORT || 8000
 
